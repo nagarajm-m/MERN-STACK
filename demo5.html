@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home and Login</title>
+    <style>
+       
+        header {
+            background-color: #075a68;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .page { 
+            display: none; 
+        }
+        .active {
+             display: block; 
+            }
+        button {
+             margin-top: 10px; 
+             padding: 8px 15px; 
+            }
+
+        img {
+         width:350px;
+         height:120px;
+         margin:80px;
+         border-radius:30px;
+        }
+    </style>
+</head>
+<body>
+
+ 
+    <header>
+    developing website
+    </header>
+
+  
+    <div id="home" class="page active">
+        <h1>Welcome to Home Page of mern</h1>
+
+        
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Nature 1">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Nature 2">
+
+        <br><br>
+        <button onclick="showLogin()">Go to Login</button>
+    </div>
+
+    
+    <div id="login" class="page">
+        <h1>Login Page</h1>
+
+        <li>Username:</li><br>
+        <input type="text"><br><br>
+
+        <li>Password:</li><br>
+        <input type="password"><br><br>
+
+        <button>Login</button><br><br>
+
+        <button onclick="showHome()">Back to Home</button>
+    </div>
+
+   
+    <script>
+        function showLogin() {
+            document.getElementById("home").classList.remove("active");
+            document.getElementById("login").classList.add("active");
+        }
+
+        function showHome() {
+            document.getElementById("login").classList.remove("active");
+            document.getElementById("home").classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
